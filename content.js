@@ -93,9 +93,9 @@ function processItem(item) {
 
   if (settings.showManualButton) {
     const btn = ensureButton(item);
-    const label = isManual ? 'Visa igen' : 'Dölj';
+    const label = chrome.i18n.getMessage(isManual ? 'btnShow' : 'btnHide');
     if (btn.textContent !== label) btn.textContent = label;
-    btn.title = isManual ? 'Sluta dölja den här videon' : 'Dölj den här videon';
+    btn.title = chrome.i18n.getMessage(isManual ? 'btnShowTitle' : 'btnHideTitle');
   } else {
     item.querySelector(':scope > .ywh-btn')?.remove();
   }

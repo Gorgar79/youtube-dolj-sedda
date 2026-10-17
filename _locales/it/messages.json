@@ -1,0 +1,53 @@
+{
+  "extName": {
+    "message": "Nascondi video visti per YouTube"
+  },
+  "extDescription": {
+    "message": "Nasconde i video già visti (oltre una percentuale scelta) nelle iscrizioni di YouTube e permette di nasconderli a mano."
+  },
+  "popupTitle": {
+    "message": "Nascondi video visti"
+  },
+  "optEnabled": {
+    "message": "Nascondi automaticamente i video visti"
+  },
+  "thresholdLabel": {
+    "message": "Considerato visto almeno al:"
+  },
+  "optShowManualButton": {
+    "message": "Mostra il pulsante \"Nascondi\" sui video"
+  },
+  "optIncludeHome": {
+    "message": "Applica anche alla pagina iniziale"
+  },
+  "optRevealHidden": {
+    "message": "Mostra i video nascosti (sbiaditi)"
+  },
+  "manualCount": {
+    "message": "Video nascosti manualmente: $COUNT$",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "12"
+      }
+    }
+  },
+  "clearButton": {
+    "message": "Cancella"
+  },
+  "clearConfirm": {
+    "message": "Mostrare di nuovo tutti i video nascosti manualmente?"
+  },
+  "btnHide": {
+    "message": "Nascondi"
+  },
+  "btnHideTitle": {
+    "message": "Nascondi questo video"
+  },
+  "btnShow": {
+    "message": "Mostra di nuovo"
+  },
+  "btnShowTitle": {
+    "message": "Smetti di nascondere questo video"
+  }
+}

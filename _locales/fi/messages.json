@@ -1,0 +1,53 @@
+{
+  "extName": {
+    "message": "Piilota katsotut videot YouTubessa"
+  },
+  "extDescription": {
+    "message": "Piilottaa jo katsomasi videot (valitun prosenttirajan ylittäneet) YouTube-tilauksistasi ja antaa piilottaa videoita käsin."
+  },
+  "popupTitle": {
+    "message": "Piilota katsotut videot"
+  },
+  "optEnabled": {
+    "message": "Piilota katsotut videot automaattisesti"
+  },
+  "thresholdLabel": {
+    "message": "Lasketaan katsotuksi vähintään:"
+  },
+  "optShowManualButton": {
+    "message": "Näytä Piilota-painike videoissa"
+  },
+  "optIncludeHome": {
+    "message": "Käytä myös etusivulla"
+  },
+  "optRevealHidden": {
+    "message": "Näytä piilotetut videot (himmennettyinä)"
+  },
+  "manualCount": {
+    "message": "Käsin piilotetut videot: $COUNT$",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "12"
+      }
+    }
+  },
+  "clearButton": {
+    "message": "Tyhjennä"
+  },
+  "clearConfirm": {
+    "message": "Näytetäänkö kaikki käsin piilotetut videot uudelleen?"
+  },
+  "btnHide": {
+    "message": "Piilota"
+  },
+  "btnHideTitle": {
+    "message": "Piilota tämä video"
+  },
+  "btnShow": {
+    "message": "Näytä uudelleen"
+  },
+  "btnShowTitle": {
+    "message": "Lopeta tämän videon piilottaminen"
+  }
+}

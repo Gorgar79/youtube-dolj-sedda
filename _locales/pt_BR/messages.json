@@ -1,0 +1,53 @@
+{
+  "extName": {
+    "message": "Ocultar vídeos assistidos para YouTube"
+  },
+  "extDescription": {
+    "message": "Oculta vídeos já assistidos (acima de uma porcentagem escolhida) nas inscrições do YouTube e permite ocultá-los manualmente."
+  },
+  "popupTitle": {
+    "message": "Ocultar vídeos assistidos"
+  },
+  "optEnabled": {
+    "message": "Ocultar automaticamente vídeos assistidos"
+  },
+  "thresholdLabel": {
+    "message": "Conta como assistido a partir de:"
+  },
+  "optShowManualButton": {
+    "message": "Mostrar o botão \"Ocultar\" nos vídeos"
+  },
+  "optIncludeHome": {
+    "message": "Aplicar também na página inicial"
+  },
+  "optRevealHidden": {
+    "message": "Mostrar vídeos ocultos (esmaecidos)"
+  },
+  "manualCount": {
+    "message": "Vídeos ocultados manualmente: $COUNT$",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "12"
+      }
+    }
+  },
+  "clearButton": {
+    "message": "Limpar"
+  },
+  "clearConfirm": {
+    "message": "Mostrar novamente todos os vídeos ocultados manualmente?"
+  },
+  "btnHide": {
+    "message": "Ocultar"
+  },
+  "btnHideTitle": {
+    "message": "Ocultar este vídeo"
+  },
+  "btnShow": {
+    "message": "Mostrar novamente"
+  },
+  "btnShowTitle": {
+    "message": "Parar de ocultar este vídeo"
+  }
+}

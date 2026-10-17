@@ -1,0 +1,53 @@
+{
+  "extName": {
+    "message": "視聴済み動画を非表示 for YouTube"
+  },
+  "extDescription": {
+    "message": "YouTube の登録チャンネルで、指定した割合以上視聴した動画を非表示にします。動画を手動で非表示にすることもできます。"
+  },
+  "popupTitle": {
+    "message": "視聴済み動画を非表示"
+  },
+  "optEnabled": {
+    "message": "視聴済み動画を自動的に非表示にする"
+  },
+  "thresholdLabel": {
+    "message": "視聴済みとみなす割合:"
+  },
+  "optShowManualButton": {
+    "message": "動画に「非表示」ボタンを表示"
+  },
+  "optIncludeHome": {
+    "message": "ホームページにも適用"
+  },
+  "optRevealHidden": {
+    "message": "非表示の動画を表示(半透明)"
+  },
+  "manualCount": {
+    "message": "手動で非表示にした動画: $COUNT$ 件",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "12"
+      }
+    }
+  },
+  "clearButton": {
+    "message": "クリア"
+  },
+  "clearConfirm": {
+    "message": "手動で非表示にしたすべての動画を再表示しますか?"
+  },
+  "btnHide": {
+    "message": "非表示"
+  },
+  "btnHideTitle": {
+    "message": "この動画を非表示にする"
+  },
+  "btnShow": {
+    "message": "再表示"
+  },
+  "btnShowTitle": {
+    "message": "この動画の非表示を解除"
+  }
+}

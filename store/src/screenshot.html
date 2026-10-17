@@ -1,0 +1,178 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+  * { box-sizing: border-box; }
+  html, body { margin: 0; width: 1280px; height: 800px; overflow: hidden; }
+  body {
+    background: radial-gradient(circle at 15% 20%, #3a0a10 0%, #0f0f0f 55%);
+    color: #f1f1f1;
+    font-family: "Segoe UI", Roboto, Arial, sans-serif;
+    position: relative;
+  }
+  .intro { position: absolute; left: 64px; top: 120px; width: 400px; }
+  .intro img { width: 112px; height: 112px; }
+  h1 { font-size: 46px; line-height: 1.1; margin: 28px 0 16px; font-weight: 700; }
+  .sub { font-size: 20px; color: #c9c9c9; margin: 0 0 32px; line-height: 1.4; }
+  ul { list-style: none; padding: 0; margin: 0; }
+  li { font-size: 18px; margin: 14px 0; padding-left: 34px; position: relative; color: #e6e6e6; }
+  li::before {
+    content: ""; position: absolute; left: 0; top: 3px; width: 20px; height: 20px;
+    border-radius: 50%; background: #e8001f;
+    -webkit-mask: none;
+  }
+  li::after {
+    content: ""; position: absolute; left: 6px; top: 8px; width: 7px; height: 4px;
+    border-left: 2.5px solid #fff; border-bottom: 2.5px solid #fff; transform: rotate(-45deg);
+  }
+
+  .feed {
+    position: absolute; left: 510px; top: 56px; width: 720px;
+    background: #181818; border: 1px solid #2a2a2a; border-radius: 16px; padding: 22px 22px 8px;
+    box-shadow: 0 30px 80px rgba(0,0,0,.5);
+  }
+  .feed-title { font-size: 18px; font-weight: 600; margin: 0 0 16px; }
+  .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px 14px; }
+  .card { position: relative; }
+  .thumb { position: relative; height: 122px; border-radius: 10px; overflow: hidden; }
+  .thumb .dur { position: absolute; right: 6px; bottom: 8px; background: rgba(0,0,0,.8); font-size: 11px; padding: 1px 5px; border-radius: 4px; }
+  .thumb .bar { position: absolute; left: 0; bottom: 0; height: 4px; background: #f00; }
+  .meta { display: flex; gap: 8px; margin-top: 9px; }
+  .avatar { width: 26px; height: 26px; border-radius: 50%; flex: none; }
+  .lines { flex: 1; }
+  .line { height: 9px; border-radius: 5px; background: #3a3a3a; margin: 3px 0 7px; }
+  .line.short { width: 55%; background: #2c2c2c; }
+  .faded { opacity: .28; }
+  .tag {
+    position: absolute; left: 50%; top: 61px; transform: translate(-50%, -50%);
+    width: 44px; height: 44px; border-radius: 50%; background: rgba(0,0,0,.7);
+    display: grid; place-items: center;
+  }
+  .tag img { width: 28px; }
+  .hidebtn {
+    position: absolute; top: 8px; left: 8px; background: #cc0000; color: #fff;
+    font-size: 12px; font-weight: 500; padding: 4px 10px; border-radius: 6px;
+  }
+  .cursor { position: absolute; left: 62px; top: 24px; width: 18px; }
+
+  .popup {
+    position: absolute; right: 36px; bottom: 34px; width: 310px;
+    background: #0f0f0f; border: 1px solid #333; border-radius: 12px;
+    padding: 14px 16px; font-size: 13px; box-shadow: 0 20px 60px rgba(0,0,0,.7);
+  }
+  .popup h2 { display: flex; align-items: center; gap: 8px; font-size: 15px; margin: 0 0 12px; }
+  .popup h2 img { width: 22px; }
+  .prow { display: flex; justify-content: space-between; align-items: center; margin: 9px 0; gap: 10px; }
+  .cb { width: 16px; height: 16px; border-radius: 3px; flex: none; border: 2px solid #777; }
+  .cb.on { background: #f00; border-color: #f00; position: relative; }
+  .cb.on::after {
+    content: ""; position: absolute; left: 3px; top: 1px; width: 4px; height: 8px;
+    border-right: 2px solid #fff; border-bottom: 2px solid #fff; transform: rotate(45deg);
+  }
+  .muted { color: #aaa; font-size: 12px; }
+  .range { display: flex; align-items: center; gap: 8px; margin: 6px 0 10px; }
+  .track { flex: 1; height: 4px; background: #555; border-radius: 2px; position: relative; }
+  .track::before { content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 95%; background: #f00; border-radius: 2px; }
+  .track::after { content: ""; position: absolute; left: calc(95% - 7px); top: -5px; width: 14px; height: 14px; border-radius: 50%; background: #f00; }
+  .num { border: 1px solid #3f3f3f; background: #272727; border-radius: 4px; padding: 2px 8px; }
+  .phr { border-top: 1px solid #3f3f3f; margin: 10px 0; }
+  .pbtn { border: 1px solid #3f3f3f; background: #272727; border-radius: 16px; padding: 4px 12px; }
+</style>
+</head>
+<body>
+  <div class="intro">
+    <img src="../../icons/icon.svg" alt="">
+    <h1 id="h"></h1>
+    <p class="sub" id="sub"></p>
+    <ul id="bullets"></ul>
+  </div>
+
+  <div class="feed">
+    <div class="feed-title" id="feedTitle"></div>
+    <div class="grid" id="grid"></div>
+  </div>
+
+  <div class="popup">
+    <h2><img src="../../icons/icon.svg" alt=""><span id="pTitle"></span></h2>
+    <div class="prow"><span id="pEnabled"></span><span class="cb on"></span></div>
+    <div class="muted" id="pThreshold"></div>
+    <div class="range"><div class="track"></div><span class="num">95</span> %</div>
+    <div class="phr"></div>
+    <div class="prow"><span id="pButton"></span><span class="cb on"></span></div>
+    <div class="prow"><span id="pHome"></span><span class="cb"></span></div>
+    <div class="prow"><span id="pReveal"></span><span class="cb on"></span></div>
+    <div class="phr"></div>
+    <div class="prow"><span class="muted" id="pCount"></span><span class="pbtn" id="pClear"></span></div>
+  </div>
+
+<script>
+const T = {
+  en: {
+    h: 'Hide watched videos',
+    sub: "Your subscriptions feed, without the videos you've already seen.",
+    bullets: ['Auto-hides videos watched past your chosen %', 'Hide any video manually with one click', 'Turn on/off and adjust anytime'],
+    feedTitle: 'Subscriptions', hide: 'Hide',
+    pTitle: 'Hide watched videos', pEnabled: 'Automatically hide watched videos', pThreshold: 'Counts as watched at least:',
+    pButton: 'Show "Hide" button on videos', pHome: 'Also apply on the home page', pReveal: 'Show hidden videos (faded)',
+    pCount: 'Manually hidden videos: 3', pClear: 'Clear'
+  },
+  sv: {
+    h: 'Dölj sedda videor',
+    sub: 'Ditt prenumerationsflöde – utan videorna du redan sett.',
+    bullets: ['Döljer automatiskt videor sedda över vald %', 'Dölj valfri video manuellt med ett klick', 'Slå av/på och justera när du vill'],
+    feedTitle: 'Prenumerationer', hide: 'Dölj',
+    pTitle: 'Dölj sedda videor', pEnabled: 'Dölj sedda videor automatiskt', pThreshold: 'Räknas som sedd vid minst:',
+    pButton: 'Visa "Dölj"-knapp på videor', pHome: 'Gäller även startsidan', pReveal: 'Visa dolda videor (tonade)',
+    pCount: 'Manuellt dolda videor: 3', pClear: 'Rensa'
+  }
+};
+const lang = new URLSearchParams(location.search).get('lang') || 'en';
+const s = T[lang] || T.en;
+for (const id of ['h','sub','feedTitle','pTitle','pEnabled','pThreshold','pButton','pHome','pReveal','pCount','pClear']) {
+  document.getElementById(id).textContent = s[id];
+}
+document.getElementById('bullets').innerHTML = s.bullets.map(b => `<li>${b}</li>`).join('');
+
+// [gradient, avatar, duration, progress%, state]
+const cards = [
+  ['#2b5876,#4e4376', '#4e9af1', '14:02', 0,   ''],
+  ['#ff7e5f,#feb47b', '#f39c12', '22:48', 100, 'hidden'],
+  ['#11998e,#38ef7d', '#2ecc71', '9:15',  35,  ''],
+  ['#8e2de2,#4a00e0', '#9b59b6', '31:07', 97,  'hidden'],
+  ['#f7971e,#ffd200', '#e67e22', '6:42',  0,   'hover'],
+  ['#00b4db,#0083b0', '#1abc9c', '18:30', 0,   ''],
+  ['#cb356b,#bd3f32', '#e74c3c', '12:11', 0,   ''],
+  ['#3a6073,#16222a', '#95a5a6', '27:54', 100, 'hidden'],
+  ['#56ab2f,#a8e063', '#27ae60', '4:58',  10,  '']
+];
+document.getElementById('grid').innerHTML = cards.map(([g, av, dur, p, st]) => `
+  <div class="card ${st === 'hidden' ? 'faded' : ''}">
+    <div class="thumb" style="background:linear-gradient(135deg,${g})">
+      <span class="dur">${dur}</span>
+      ${p ? `<span class="bar" style="width:${p}%"></span>` : ''}
+    </div>
+    <div class="meta"><span class="avatar" style="background:${av}"></span>
+      <div class="lines"><div class="line"></div><div class="line short"></div></div></div>
+    ${st === 'hover' ? `<span class="hidebtn">${s.hide}</span>
+      <svg class="cursor" viewBox="0 0 18 24"><path d="M1 1 L1 19 L6 14.5 L9.5 22 L12.5 20.7 L9 13.3 L16 13.3 Z" fill="#fff" stroke="#000" stroke-width="1.3"/></svg>` : ''}
+  </div>
+  ${st === 'hidden' ? '' : ''}`).join('');
+document.querySelectorAll('.card.faded').forEach(c => {
+  const tag = document.createElement('div');
+  tag.className = 'tag';
+  tag.innerHTML = '<img src="../../icons/icon-small.svg" alt="">';
+  c.parentNode.insertBefore(tag, c.nextSibling);
+});
+// placera ikonen ovanpå de tonade korten (utanför opacity)
+document.querySelectorAll('.card.faded').forEach(c => {
+  const tag = c.nextElementSibling;
+  const wrap = document.createElement('div');
+  wrap.style.position = 'relative';
+  c.parentNode.insertBefore(wrap, c);
+  wrap.appendChild(c);
+  wrap.appendChild(tag);
+});
+</script>
+</body>
+</html>

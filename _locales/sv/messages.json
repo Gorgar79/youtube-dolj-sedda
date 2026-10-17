@@ -1,0 +1,53 @@
+{
+  "extName": {
+    "message": "Dölj sedda videor för YouTube"
+  },
+  "extDescription": {
+    "message": "Döljer videor du redan sett (över en vald procentsats) i dina YouTube-prenumerationer och låter dig dölja videor manuellt."
+  },
+  "popupTitle": {
+    "message": "Dölj sedda videor"
+  },
+  "optEnabled": {
+    "message": "Dölj sedda videor automatiskt"
+  },
+  "thresholdLabel": {
+    "message": "Räknas som sedd vid minst:"
+  },
+  "optShowManualButton": {
+    "message": "Visa \"Dölj\"-knapp på videor"
+  },
+  "optIncludeHome": {
+    "message": "Gäller även startsidan"
+  },
+  "optRevealHidden": {
+    "message": "Visa dolda videor (tonade)"
+  },
+  "manualCount": {
+    "message": "Manuellt dolda videor: $COUNT$",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "12"
+      }
+    }
+  },
+  "clearButton": {
+    "message": "Rensa"
+  },
+  "clearConfirm": {
+    "message": "Visa alla manuellt dolda videor igen?"
+  },
+  "btnHide": {
+    "message": "Dölj"
+  },
+  "btnHideTitle": {
+    "message": "Dölj den här videon"
+  },
+  "btnShow": {
+    "message": "Visa igen"
+  },
+  "btnShowTitle": {
+    "message": "Sluta dölja den här videon"
+  }
+}

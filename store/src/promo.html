@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+  html, body { margin: 0; width: 440px; height: 280px; overflow: hidden; }
+  body {
+    background: radial-gradient(circle at 20% 30%, #4a0c14 0%, #0f0f0f 70%);
+    color: #fff; font-family: "Segoe UI", Roboto, Arial, sans-serif;
+    display: flex; align-items: center; gap: 22px; padding: 0 30px; box-sizing: border-box;
+  }
+  img { width: 128px; height: 128px; flex: none; }
+  h1 { font-size: 30px; line-height: 1.12; margin: 0 0 10px; font-weight: 700; }
+  p { margin: 0; font-size: 15px; color: #cfcfcf; line-height: 1.35; }
+</style>
+</head>
+<body>
+  <img src="../../icons/icon.svg" alt="">
+  <div><h1 id="h"></h1><p id="p"></p></div>
+<script>
+const T = {
+  en: { h: 'Hide watched videos', p: 'A cleaner subscriptions feed for YouTube' },
+  sv: { h: 'Dölj sedda videor', p: 'Ett renare prenumerationsflöde på YouTube' }
+};
+const s = T[new URLSearchParams(location.search).get('lang')] || T.en;
+document.getElementById('h').textContent = s.h;
+document.getElementById('p').textContent = s.p;
+</script>
+</body>
+</html>

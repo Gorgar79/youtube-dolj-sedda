@@ -7,6 +7,14 @@ const DEFAULTS = {
 };
 
 const $ = (id) => document.getElementById(id);
+const t = (key, subs) => chrome.i18n.getMessage(key, subs);
+
+function localize() {
+  document.documentElement.lang = chrome.i18n.getUILanguage();
+  document.querySelectorAll('[data-i18n]').forEach((el) => {
+    el.textContent = t(el.dataset.i18n);
+  });
+}
 const checkboxes = ['enabled', 'showManualButton', 'includeHome', 'revealHidden'];
 
 function clampThreshold(v) {
@@ -24,11 +32,13 @@ function setThreshold(v, save) {
 
 function updateManualCount(manualHidden) {
   const n = Object.keys(manualHidden || {}).length;
-  $('manualCount').textContent = `Manuellt dolda videor: ${n}`;
+  $('manualCount').textContent = t('manualCount', [String(n)]);
   $('clearManual').disabled = n === 0;
 }
 
 async function init() {
+  localize();
+
   const [settings, local] = await Promise.all([
     chrome.storage.sync.get(DEFAULTS),
     chrome.storage.local.get({ manualHidden: {} })
@@ -47,7 +57,7 @@ async function init() {
 
   updateManualCount(local.manualHidden);
   $('clearManual').addEventListener('click', () => {
-    if (confirm('Visa alla manuellt dolda videor igen?')) {
+    if (confirm(t('clearConfirm'))) {
       chrome.storage.local.set({ manualHidden: {} });
       updateManualCount({});
     }

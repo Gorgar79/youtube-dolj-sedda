@@ -1,0 +1,53 @@
+{
+  "extName": {
+    "message": "Ocultar vídeos vistos para YouTube"
+  },
+  "extDescription": {
+    "message": "Oculta los vídeos ya vistos (desde un porcentaje elegido) en tus suscripciones de YouTube y permite ocultarlos manualmente."
+  },
+  "popupTitle": {
+    "message": "Ocultar vídeos vistos"
+  },
+  "optEnabled": {
+    "message": "Ocultar automáticamente los vídeos vistos"
+  },
+  "thresholdLabel": {
+    "message": "Se considera visto a partir de:"
+  },
+  "optShowManualButton": {
+    "message": "Mostrar el botón «Ocultar» en los vídeos"
+  },
+  "optIncludeHome": {
+    "message": "Aplicar también en la página de inicio"
+  },
+  "optRevealHidden": {
+    "message": "Mostrar vídeos ocultos (atenuados)"
+  },
+  "manualCount": {
+    "message": "Vídeos ocultados manualmente: $COUNT$",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "12"
+      }
+    }
+  },
+  "clearButton": {
+    "message": "Borrar"
+  },
+  "clearConfirm": {
+    "message": "¿Volver a mostrar todos los vídeos ocultados manualmente?"
+  },
+  "btnHide": {
+    "message": "Ocultar"
+  },
+  "btnHideTitle": {
+    "message": "Ocultar este vídeo"
+  },
+  "btnShow": {
+    "message": "Mostrar de nuevo"
+  },
+  "btnShowTitle": {
+    "message": "Dejar de ocultar este vídeo"
+  }
+}

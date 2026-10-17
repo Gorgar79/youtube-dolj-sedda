@@ -1,0 +1,53 @@
+{
+  "extName": {
+    "message": "Masquer les vidéos vues pour YouTube"
+  },
+  "extDescription": {
+    "message": "Masque les vidéos déjà regardées (au-delà d'un pourcentage choisi) dans vos abonnements YouTube et permet d'en masquer manuellement."
+  },
+  "popupTitle": {
+    "message": "Masquer les vidéos vues"
+  },
+  "optEnabled": {
+    "message": "Masquer automatiquement les vidéos vues"
+  },
+  "thresholdLabel": {
+    "message": "Considérée comme vue à partir de :"
+  },
+  "optShowManualButton": {
+    "message": "Afficher le bouton « Masquer » sur les vidéos"
+  },
+  "optIncludeHome": {
+    "message": "S'applique aussi à la page d'accueil"
+  },
+  "optRevealHidden": {
+    "message": "Afficher les vidéos masquées (estompées)"
+  },
+  "manualCount": {
+    "message": "Vidéos masquées manuellement : $COUNT$",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "12"
+      }
+    }
+  },
+  "clearButton": {
+    "message": "Effacer"
+  },
+  "clearConfirm": {
+    "message": "Afficher à nouveau toutes les vidéos masquées manuellement ?"
+  },
+  "btnHide": {
+    "message": "Masquer"
+  },
+  "btnHideTitle": {
+    "message": "Masquer cette vidéo"
+  },
+  "btnShow": {
+    "message": "Réafficher"
+  },
+  "btnShowTitle": {
+    "message": "Ne plus masquer cette vidéo"
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "extName": {
+    "message": "Bekeken video's verbergen voor YouTube"
+  },
+  "extDescription": {
+    "message": "Verbergt al bekeken video's (boven een gekozen percentage) in je YouTube-abonnementen en laat je video's handmatig verbergen."
+  },
+  "popupTitle": {
+    "message": "Bekeken video's verbergen"
+  },
+  "optEnabled": {
+    "message": "Bekeken video's automatisch verbergen"
+  },
+  "thresholdLabel": {
+    "message": "Telt als bekeken vanaf:"
+  },
+  "optShowManualButton": {
+    "message": "Knop \"Verbergen\" op video's tonen"
+  },
+  "optIncludeHome": {
+    "message": "Ook toepassen op de startpagina"
+  },
+  "optRevealHidden": {
+    "message": "Verborgen video's tonen (vervaagd)"
+  },
+  "manualCount": {
+    "message": "Handmatig verborgen video's: $COUNT$",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "12"
+      }
+    }
+  },
+  "clearButton": {
+    "message": "Wissen"
+  },
+  "clearConfirm": {
+    "message": "Alle handmatig verborgen video's weer tonen?"
+  },
+  "btnHide": {
+    "message": "Verbergen"
+  },
+  "btnHideTitle": {
+    "message": "Deze video verbergen"
+  },
+  "btnShow": {
+    "message": "Weer tonen"
+  },
+  "btnShowTitle": {
+    "message": "Deze video niet meer verbergen"
+  }
+}

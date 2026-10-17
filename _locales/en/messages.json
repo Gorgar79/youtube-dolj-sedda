@@ -1,0 +1,53 @@
+{
+  "extName": {
+    "message": "Hide Watched Videos for YouTube"
+  },
+  "extDescription": {
+    "message": "Hides videos you've already watched (above a chosen percentage) in your YouTube subscriptions, and lets you hide videos manually."
+  },
+  "popupTitle": {
+    "message": "Hide watched videos"
+  },
+  "optEnabled": {
+    "message": "Automatically hide watched videos"
+  },
+  "thresholdLabel": {
+    "message": "Counts as watched at least:"
+  },
+  "optShowManualButton": {
+    "message": "Show \"Hide\" button on videos"
+  },
+  "optIncludeHome": {
+    "message": "Also apply on the home page"
+  },
+  "optRevealHidden": {
+    "message": "Show hidden videos (faded)"
+  },
+  "manualCount": {
+    "message": "Manually hidden videos: $COUNT$",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "12"
+      }
+    }
+  },
+  "clearButton": {
+    "message": "Clear"
+  },
+  "clearConfirm": {
+    "message": "Show all manually hidden videos again?"
+  },
+  "btnHide": {
+    "message": "Hide"
+  },
+  "btnHideTitle": {
+    "message": "Hide this video"
+  },
+  "btnShow": {
+    "message": "Show again"
+  },
+  "btnShowTitle": {
+    "message": "Stop hiding this video"
+  }
+}

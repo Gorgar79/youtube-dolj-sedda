@@ -1,0 +1,53 @@
+{
+  "extName": {
+    "message": "Gesehene Videos ausblenden für YouTube"
+  },
+  "extDescription": {
+    "message": "Blendet gesehene Videos (ab einem wählbaren Prozentsatz) in deinen YouTube-Abos aus und lässt dich Videos manuell ausblenden."
+  },
+  "popupTitle": {
+    "message": "Gesehene Videos ausblenden"
+  },
+  "optEnabled": {
+    "message": "Gesehene Videos automatisch ausblenden"
+  },
+  "thresholdLabel": {
+    "message": "Gilt als gesehen ab:"
+  },
+  "optShowManualButton": {
+    "message": "„Ausblenden“-Schaltfläche auf Videos anzeigen"
+  },
+  "optIncludeHome": {
+    "message": "Auch auf der Startseite anwenden"
+  },
+  "optRevealHidden": {
+    "message": "Ausgeblendete Videos anzeigen (verblasst)"
+  },
+  "manualCount": {
+    "message": "Manuell ausgeblendete Videos: $COUNT$",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "12"
+      }
+    }
+  },
+  "clearButton": {
+    "message": "Zurücksetzen"
+  },
+  "clearConfirm": {
+    "message": "Alle manuell ausgeblendeten Videos wieder anzeigen?"
+  },
+  "btnHide": {
+    "message": "Ausblenden"
+  },
+  "btnHideTitle": {
+    "message": "Dieses Video ausblenden"
+  },
+  "btnShow": {
+    "message": "Wieder anzeigen"
+  },
+  "btnShowTitle": {
+    "message": "Dieses Video nicht mehr ausblenden"
+  }
+}

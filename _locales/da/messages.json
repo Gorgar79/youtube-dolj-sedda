@@ -1,0 +1,53 @@
+{
+  "extName": {
+    "message": "Skjul sete videoer til YouTube"
+  },
+  "extDescription": {
+    "message": "Skjuler videoer, du allerede har set (over en valgt procentdel), i dine YouTube-abonnementer og lader dig skjule videoer manuelt."
+  },
+  "popupTitle": {
+    "message": "Skjul sete videoer"
+  },
+  "optEnabled": {
+    "message": "Skjul sete videoer automatisk"
+  },
+  "thresholdLabel": {
+    "message": "Tæller som set ved mindst:"
+  },
+  "optShowManualButton": {
+    "message": "Vis \"Skjul\"-knap på videoer"
+  },
+  "optIncludeHome": {
+    "message": "Gælder også forsiden"
+  },
+  "optRevealHidden": {
+    "message": "Vis skjulte videoer (nedtonede)"
+  },
+  "manualCount": {
+    "message": "Manuelt skjulte videoer: $COUNT$",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "12"
+      }
+    }
+  },
+  "clearButton": {
+    "message": "Ryd"
+  },
+  "clearConfirm": {
+    "message": "Vis alle manuelt skjulte videoer igen?"
+  },
+  "btnHide": {
+    "message": "Skjul"
+  },
+  "btnHideTitle": {
+    "message": "Skjul denne video"
+  },
+  "btnShow": {
+    "message": "Vis igen"
+  },
+  "btnShowTitle": {
+    "message": "Stop med at skjule denne video"
+  }
+}

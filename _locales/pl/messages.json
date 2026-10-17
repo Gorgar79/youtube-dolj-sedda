@@ -1,0 +1,53 @@
+{
+  "extName": {
+    "message": "Ukryj obejrzane filmy w YouTube"
+  },
+  "extDescription": {
+    "message": "Ukrywa już obejrzane filmy (powyżej wybranego procentu) w subskrypcjach YouTube i pozwala ręcznie ukrywać filmy."
+  },
+  "popupTitle": {
+    "message": "Ukryj obejrzane filmy"
+  },
+  "optEnabled": {
+    "message": "Automatycznie ukrywaj obejrzane filmy"
+  },
+  "thresholdLabel": {
+    "message": "Uznaj za obejrzany od:"
+  },
+  "optShowManualButton": {
+    "message": "Pokazuj przycisk „Ukryj” na filmach"
+  },
+  "optIncludeHome": {
+    "message": "Stosuj także na stronie głównej"
+  },
+  "optRevealHidden": {
+    "message": "Pokazuj ukryte filmy (wyszarzone)"
+  },
+  "manualCount": {
+    "message": "Filmy ukryte ręcznie: $COUNT$",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "12"
+      }
+    }
+  },
+  "clearButton": {
+    "message": "Wyczyść"
+  },
+  "clearConfirm": {
+    "message": "Pokazać ponownie wszystkie ręcznie ukryte filmy?"
+  },
+  "btnHide": {
+    "message": "Ukryj"
+  },
+  "btnHideTitle": {
+    "message": "Ukryj ten film"
+  },
+  "btnShow": {
+    "message": "Pokaż ponownie"
+  },
+  "btnShowTitle": {
+    "message": "Przestań ukrywać ten film"
+  }
+}
