@@ -1,0 +1,20 @@
+{
+  "manifest_version": 3,
+  "name": "YouTube – Dölj sedda videor",
+  "version": "1.0.0",
+  "description": "Döljer videor du redan sett (över en vald procentsats) i Prenumerationer, och låter dig dölja videor manuellt.",
+  "permissions": ["storage"],
+  "host_permissions": ["https://www.youtube.com/*"],
+  "content_scripts": [
+    {
+      "matches": ["https://www.youtube.com/*"],
+      "js": ["content.js"],
+      "css": ["content.css"],
+      "run_at": "document_idle"
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Dölj sedda videor"
+  }
+}
