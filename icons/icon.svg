@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ff4545"/>
+      <stop offset="1" stop-color="#d1001c"/>
+    </linearGradient>
+    <mask id="cut">
+      <rect width="128" height="128" fill="#fff"/>
+      <line x1="34" y1="88" x2="94" y2="22" stroke="#000" stroke-width="22" stroke-linecap="round"/>
+    </mask>
+  </defs>
+  <!-- videominiatyr -->
+  <rect x="4" y="12" width="120" height="104" rx="24" fill="url(#bg)"/>
+  <!-- överstruket öga = dölj -->
+  <g mask="url(#cut)">
+    <path d="M22 54 C38 30 51 26 64 26 C77 26 90 30 106 54 C90 78 77 82 64 82 C51 82 38 78 22 54 Z"
+          fill="none" stroke="#fff" stroke-width="9" stroke-linejoin="round"/>
+    <circle cx="64" cy="54" r="13" fill="#fff"/>
+  </g>
+  <line x1="34" y1="88" x2="94" y2="22" stroke="#fff" stroke-width="9" stroke-linecap="round"/>
+  <!-- förloppsstapel = sedd -->
+  <rect x="20" y="97" width="88" height="7" rx="3.5" fill="#fff" fill-opacity="0.35"/>
+  <rect x="20" y="97" width="83" height="7" rx="3.5" fill="#fff"/>
+</svg>
